@@ -363,13 +363,22 @@ header .container nav .search-icon i {
     height: 600px;
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
-    background-color: #1f2021;
     background-image: url('../images/design-future.jpg');
     background-size: cover;
     position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
+}
+
+.design::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 60%);
 }
 
 .design .image,
@@ -383,19 +392,101 @@ header .container nav .search-icon i {
    text-align: center;
 }
 
+@media (max-width: 767px) {
+    .design .image {
+        display: none;
+     }
+}
+
 .design .image img {
-    position: absolute;
-    bottom: -150;
+    position: relative;
+    bottom: -150px;
 }
 
 .design .text {
     background-color: var(--transparent-color);
+    color: white;
     padding: 50px;
 }
 
-.design .text h3 {
+.design .text h2 {
     margin-bottom: 40px;
     font-weight: normal;
     text-transform: uppercase;
 }
+
+.design .text ul li {
+    padding: 15px 0;
+}
+
+.design .text ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+    font-weight: 900;
+    position: relative;
+    margin-right: 20px;
+}
 /* End design section */
+
+/* Start portfolio */
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.portfolio .portfolio-content ul {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .portfolio-content ul a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.portfolio .portfolio-content ul a:hover {
+    background-color: var(--main-color);
+}
+
+.portfolio .portfolio-content ul a.active {
+    background-color: var(--main-color);
+}
+
+.portfolio .portfolio-content .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    margin: 60px 0;
+}
+
+.portfolio .portfolio-content .content .box .image img {
+    max-width: 100%;
+}
+
+.portfolio .portfolio-content .content .box .text {
+    margin: 20px;
+}
+
+.portfolio .portfolio-content .content .box .text h3 {
+    margin-bottom: 20px;
+}
+
+.portfolio .portfolio-content .content .box .text p{
+    color: var(--main-color);
+}
+
+.portfolio .button-more {
+    width: 100px;
+    margin: auto;
+}
+
+.portfolio .button-more a {
+    padding: 20px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* End portfolio */
