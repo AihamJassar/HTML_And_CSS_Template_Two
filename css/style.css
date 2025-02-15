@@ -1,6 +1,8 @@
 /* Variables */
 :root {
     --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%);
+    --section-padding: 100px
 }
 
 /* Global rules */
@@ -18,7 +20,6 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: black;
 }
 
 ul {
@@ -53,6 +54,52 @@ ul {
     }
 }
 
+/* Components */
+.main-heading {
+    text-align: center;
+}
+
+.main-heading h2 {
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 70px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.main-heading h2::before {
+    content: "";
+    display: inline-block;
+    width: 120px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+}
+
+.main-heading h2::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -37px;
+}
+
+.main-heading p {
+    width: 550px;
+    max-width: 100%;
+    margin: 0 auto 100px;
+    color: #777;
+    line-height: 2;
+}
+
 /* Start header */
 header {
     position: absolute;
@@ -66,7 +113,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    min-height: 98px;
+    min-height: 97px;
 }
 
 header .container::after {
@@ -129,6 +176,8 @@ header .container nav ul li a {
     padding: 40px 10px;
     display: block;
     text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
     color: white;
     position: relative;
     z-index: 2;
@@ -165,6 +214,146 @@ header .container nav .search-icon i {
 
 .landing {
     min-height: 100vh;
+    background-color: #1f2021;
     background-image: url('../images/landing.jpg');
     background-size: cover;
+    position: relative;
 }
+
+.landing .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+.landing .text {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--transparent-color);
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px;
+}
+
+.landing .text .content {
+    max-width: 500px;
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .landing .text {
+        width: 100%;
+    }
+
+    .landing .text .content {
+        max-width: 100%;
+    }
+}
+
+.landing .text .content h2 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.landing .text .content p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.landing .change-background {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ddd;
+}
+
+@media (max-width: 767px) {
+    .landing .change-background {
+        display: none;
+    }
+}
+
+.landing .change-background.fa-angle-left {
+    left: 30px;
+}
+
+.landing .change-background.fa-angle-right {
+    right: 30px;
+}
+
+.landing ul {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.landing ul li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 10px;
+}
+
+.landing ul li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* Start services */
+
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+@media (min-width: 768px) {
+    .services .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        column-gap: 30px;
+        row-gap: 60px;
+    }
+}
+
+.services .services-container .ser-box {
+    display: flex;
+}
+
+.services .services-container .ser-box i {
+    margin-right: 50px;
+}
+
+@media (max-width: 767px) {
+    .services .services-container .ser-box {
+        flex-direction: column;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .services .services-container .ser-box i {
+        margin: 30px;
+    }
+}
+
+.services .services-container .ser-box .text h3 {
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+
+.services .services-container .ser-box .text p {
+    line-height: 2;
+    color: #777;
+}
+
+/* End services */
