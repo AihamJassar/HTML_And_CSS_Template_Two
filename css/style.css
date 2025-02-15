@@ -54,7 +54,12 @@ ul {
 }
 
 /* Start header */
-header {}
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
 
 header .container {
     display: flex;
@@ -154,4 +159,12 @@ header .container nav .search-icon i {
     transform: translateY(-50%);
 }
 
-/* Start header */
+/* End header */
+
+/* Start landing*/
+
+.landing {
+    min-height: 100vh;
+    background-image: url('../images/landing.jpg');
+    background-size: cover;
+}
