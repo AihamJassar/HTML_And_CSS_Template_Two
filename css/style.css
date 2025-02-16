@@ -631,3 +631,191 @@ header .container nav .search-icon i {
 }
 
 /* End statistic section*/
+/* Start skills section*/
+
+.skills-section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.skills-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-section .container .testimonials,
+.skills-section .container .skills {
+    flex-basis: 40%;
+}
+
+@media (max-width: 991px) {
+    .skills-section .container .testimonials,
+    .skills-section .container .skills {
+        flex-basis: 100%;
+    }
+}
+
+.skills-section .container .header {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.skills-section .container .header h2 {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.skills-section .container .header p {
+    line-height: 2;
+    font-size: 16px;
+    color: #a2a2a2;
+}
+
+.skills-section .container .testimonials .content .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+    .skills-section .container .testimonials .content .box {
+        flex-direction: column;
+    }
+}
+
+.skills-section .container .testimonials .content .box img {
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+@media (max-width: 767px) {
+    .skills-section .container .testimonials .content .box img {
+        margin: 0;
+    }
+}
+
+.skills-section .container .testimonials .content .box .text {
+    border-bottom: 1px solid #a2a2a2;
+}
+
+.skills-section .container .testimonials .content .box .text p:first-child {
+    line-height: 2;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .skills-section .container .testimonials .content .box .text p:first-child {
+        text-align: center;
+    }
+}
+
+.skills-section .container .testimonials .content .box .text p:last-child {
+    color: #a2a2a2;
+    margin-bottom: 10px;
+    text-align: end;
+}
+
+.skills-section .container .testimonials ul {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-section .container .testimonials ul li {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #777;
+}
+
+.skills-section .container .testimonials ul li.active {
+    background-color: var(--main-color);
+}
+
+.skills-section .container .skills .box {
+    margin-top: 30px;
+}
+
+.skills-section .container .skills .box h4{
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.skills-section .container .skills .box .status {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.skills-section .container .skills  .content .box:nth-child(1) .status{
+    background-image: linear-gradient(to right, var(--main-color) 90%, #a2a2a2 90%);
+}
+.skills-section .container .skills  .content .box:nth-child(2) .status{
+    background-image: linear-gradient(to right, var(--main-color) 80%, #a2a2a2 80%);
+}
+.skills-section .container .skills  .content .box:nth-child(3) .status{
+    background-image: linear-gradient(to right, var(--main-color) 85%, #a2a2a2 85%);
+}
+.skills-section .container .skills  .content .box:nth-child(4) .status{
+    background-image: linear-gradient(to right, var(--main-color) 90%, #a2a2a2 90%);
+}
+
+.skills-section .container .skills .box .status::after {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 25px;
+    background-color: #1f2021;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    transform: translateX(-50%);
+    top: calc(-100% - 5px);
+}
+
+.skills-section .container .skills  .content .box:nth-child(1) .status::after {
+    content: "90%";
+    left: 90%;
+}
+.skills-section .container .skills  .content .box:nth-child(2) .status::after {
+    content: "80%";
+    left: 80%;
+}
+.skills-section .container .skills  .content .box:nth-child(3) .status::after {
+    content: "85%";
+    left: 85%;
+}
+.skills-section .container .skills  .content .box:nth-child(4) .status::after {
+    content: "90%";
+    left: 90%;
+}
+
+.skills-section .container .skills .box .status::before {
+    content: "";
+    display: inline-block;
+    border: 10px solid;
+    border-color: #1f2021 transparent transparent transparent;
+    position: absolute;
+    transform: translateX(-50%);
+    top: -15px;
+}
+
+.skills-section .container .skills  .content .box:nth-child(1) .status::before {
+    left: 90%;
+}
+.skills-section .container .skills  .content .box:nth-child(2) .status::before {
+    left: 80%;
+}
+.skills-section .container .skills  .content .box:nth-child(3) .status::before {
+    left: 85%;
+}
+.skills-section .container .skills  .content .box:nth-child(4) .status::before {
+    left: 90%;
+}
+
+/* End skills section*/
