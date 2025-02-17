@@ -644,24 +644,19 @@ header .container nav .search-icon i {
     justify-content: space-between;
 }
 
-.skills-section .container .testimonials,
-.skills-section .container .skills {
-    flex-basis: 40%;
-}
-
-@media (max-width: 991px) {
+@media (min-width: 992px) {
     .skills-section .container .testimonials,
     .skills-section .container .skills {
-        flex-basis: 100%;
+        flex-basis: 45%;
     }
 }
 
 .skills-section .container .header {
-    text-align: center;
     margin: 30px 0;
 }
 
-.skills-section .container .header h2 {
+.skills-section .container .header h3 {
+    text-align: center;
     margin-bottom: 30px;
     text-transform: uppercase;
     font-weight: normal;
@@ -669,8 +664,8 @@ header .container nav .search-icon i {
 
 .skills-section .container .header p {
     line-height: 2;
-    font-size: 16px;
-    color: #a2a2a2;
+    color: #777;
+    text-align: center;
 }
 
 .skills-section .container .testimonials .content .box {
@@ -745,26 +740,20 @@ header .container nav .search-icon i {
 }
 
 .skills-section .container .skills .box .status {
-    width: 100%;
     height: 30px;
     margin-top: 20px;
+    background-color: #a2a2a2;
+}
+
+.skills-section .container .skills .box .status span{
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
     position: relative;
 }
 
-.skills-section .container .skills  .content .box:nth-child(1) .status{
-    background-image: linear-gradient(to right, var(--main-color) 90%, #a2a2a2 90%);
-}
-.skills-section .container .skills  .content .box:nth-child(2) .status{
-    background-image: linear-gradient(to right, var(--main-color) 80%, #a2a2a2 80%);
-}
-.skills-section .container .skills  .content .box:nth-child(3) .status{
-    background-image: linear-gradient(to right, var(--main-color) 85%, #a2a2a2 85%);
-}
-.skills-section .container .skills  .content .box:nth-child(4) .status{
-    background-image: linear-gradient(to right, var(--main-color) 90%, #a2a2a2 90%);
-}
-
-.skills-section .container .skills .box .status::after {
+.skills-section .container .skills .box .status span::after {
+    content: attr(data-prog);
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -774,48 +763,20 @@ header .container nav .search-icon i {
     color: white;
     border-radius: 5px;
     position: absolute;
-    transform: translateX(-50%);
+    transform: translateX(50%);
     top: calc(-100% - 5px);
+    right: 0;
 }
 
-.skills-section .container .skills  .content .box:nth-child(1) .status::after {
-    content: "90%";
-    left: 90%;
-}
-.skills-section .container .skills  .content .box:nth-child(2) .status::after {
-    content: "80%";
-    left: 80%;
-}
-.skills-section .container .skills  .content .box:nth-child(3) .status::after {
-    content: "85%";
-    left: 85%;
-}
-.skills-section .container .skills  .content .box:nth-child(4) .status::after {
-    content: "90%";
-    left: 90%;
-}
-
-.skills-section .container .skills .box .status::before {
+.skills-section .container .skills .box .status span::before {
     content: "";
     display: inline-block;
     border: 10px solid;
     border-color: #1f2021 transparent transparent transparent;
     position: absolute;
-    transform: translateX(-50%);
+    transform: translateX(50%);
     top: -15px;
-}
-
-.skills-section .container .skills  .content .box:nth-child(1) .status::before {
-    left: 90%;
-}
-.skills-section .container .skills  .content .box:nth-child(2) .status::before {
-    left: 80%;
-}
-.skills-section .container .skills  .content .box:nth-child(3) .status::before {
-    left: 85%;
-}
-.skills-section .container .skills  .content .box:nth-child(4) .status::before {
-    left: 90%;
+    right: 0;
 }
 
 /* End skills section*/
