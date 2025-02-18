@@ -388,13 +388,13 @@ header .container nav .search-icon i {
 }
 
 .design .image {
-   text-align: center;
+    text-align: center;
 }
 
 @media (max-width: 767px) {
     .design .image {
         display: none;
-     }
+    }
 }
 
 .design .image img {
@@ -425,6 +425,7 @@ header .container nav .search-icon i {
     position: relative;
     margin-right: 20px;
 }
+
 /* End design section */
 
 /* Start portfolio */
@@ -471,7 +472,7 @@ header .container nav .search-icon i {
 }
 
 .portfolio .portfolio-content .content .box:hover .image img {
-    transform: rotate(3deg) scale(1.1); 
+    transform: rotate(3deg) scale(1.1);
 }
 
 .portfolio .portfolio-content .content .box .text {
@@ -481,7 +482,7 @@ header .container nav .search-icon i {
     bottom: -100%;
     width: 100%;
     background-color: white;
-    transition-duration: 0.3s; 
+    transition-duration: 0.3s;
 }
 
 .portfolio .portfolio-content .content .box:hover .text {
@@ -492,7 +493,7 @@ header .container nav .search-icon i {
     margin-bottom: 10px;
 }
 
-.portfolio .portfolio-content .content .box .text p{
+.portfolio .portfolio-content .content .box .text p {
     color: var(--main-color);
 }
 
@@ -539,15 +540,17 @@ header .container nav .search-icon i {
     text-align: center;
     padding: 50px;
     color: white;
-} 
+}
 
 .video-section .box h2 {
     text-transform: uppercase;
     font-weight: normal;
 }
+
 .video-section .box p {
     margin: 30px 0;
 }
+
 .video-section .box a {
     text-decoration: none;
     color: white;
@@ -557,6 +560,7 @@ header .container nav .search-icon i {
     background-color: black;
     text-transform: uppercase;
 }
+
 /* End video section */
 
 /* Start about */
@@ -575,18 +579,19 @@ header .container nav .search-icon i {
     max-width: 100%;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .about .container img {
         bottom: -60px;
     }
 }
+
 /* End video section */
 /* Start statistic section */
 
 .statistics {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
-    background-image: url(../images/state.jpg);
+    background-image: url(../images/background.jpg);
     background-size: cover;
     position: relative;
 }
@@ -645,6 +650,7 @@ header .container nav .search-icon i {
 }
 
 @media (min-width: 992px) {
+
     .skills-section .container .testimonials,
     .skills-section .container .skills {
         flex-basis: 45%;
@@ -734,7 +740,7 @@ header .container nav .search-icon i {
     margin-top: 30px;
 }
 
-.skills-section .container .skills .box h4{
+.skills-section .container .skills .box h4 {
     text-transform: uppercase;
     font-weight: normal;
 }
@@ -745,7 +751,7 @@ header .container nav .search-icon i {
     background-color: #a2a2a2;
 }
 
-.skills-section .container .skills .box .status span{
+.skills-section .container .skills .box .status span {
     display: block;
     height: 100%;
     background-color: var(--main-color);
@@ -786,8 +792,8 @@ header .container nav .search-icon i {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
     background-color: #333;
-    /* background-image: url(../images/shuffle-06.jpg);
-    background-size: cover; */
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
     text-align: center;
     color: white;
     position: relative;
@@ -824,15 +830,20 @@ header .container nav .search-icon i {
 
 .pricing-section .content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 .pricing-section .content .box {
     text-align: center;
     border-top: 1px solid var(--main-color);
-    border-bottom: 1px solid var(--main-color);
     padding: 20px 0;
+    margin-top: 50px;
+}
+
+.pricing-section .content .box .box-content {
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
 }
 
 .pricing-section .content .box h3 {
@@ -844,13 +855,274 @@ header .container nav .search-icon i {
 .pricing-section .content .box .price {
     font-size: 50px;
     font-weight: bold;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+
+.pricing-section .content .box .price sup {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.pricing-section .content .box .price sub {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 30px;
 }
 
 .pricing-section .content .box p {
-    width: 150px;
-    padding: 15px 0;
-    border-bottom: 1 solid var(--main-color);
+    width: 145px;
+    padding: 25px 0;
+    margin: 0 auto;
+}
+
+.pricing-section .content .box p:not(:last-of-type) {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing-section .content .box a {
+    display: block;
+    margin: 30px auto 0;
+    padding: 20px;
+    border: 1px solid var(--main-color);
+    text-decoration: none;
+    width: fit-content;
+    color: #000;
+}
+
+.pricing-section .container>p {
+    text-align: center;
+    width: fit-content;
+    margin: 50px auto;
+    font-size: 25px;
+}
+
+.pricing-section .container>a {
+    display: block;
+    width: fit-content;
+    padding: 20px 50px;
+    margin: 0 auto;
+    background-color: var(--main-color);
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
 
 /* End pricing section*/
+/* Start subscribe section*/
+
+.subscribe-section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: #000;
+    background-image: url("../images/subscribe.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.subscribe-section::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+.subscribe-section .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .subscribe-section .container {
+        flex-direction: column;
+    }
+}
+
+.subscribe-section .container form {
+    display: flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+}
+
+.subscribe-section .container form i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+
+.subscribe-section .container form input[type="email"] {
+    background: none;
+    border: 1px solid white;
+    border-right: none;
+    padding: 20px 20px 20px 60px;
+    caret-color: var(--main-color);
+    color: white;
+    width: calc(100% - 100px);
+}
+
+.subscribe-section .container form input[type="email"]::placeholder {
+    color: white;
+}
+
+.subscribe-section .container form input[type="submit"] {
+    width: 100px;
+    background-color: var(--main-color);
+    border: 1px solid white;
+    border-left: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.subscribe-section .container form input[type="email"]:focus,
+.subscribe-section .container form input[type="submit"]:focus {
+    outline: none;
+}
+
+.subscribe-section .container p {
+    line-height: 2;
+    margin-left: 50px;
+}
+
+@media (max-width: 991px) {
+    .subscribe-section p {
+        margin: 30px 0 0;
+    }
+}
+
+/* End subscribe section*/
+
+/* Start concat section*/
+.contact-section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.contact-section .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .contact-section .container {
+        flex-direction: column-reverse;
+    }
+
+    .contact-section .container .info {
+        text-align: center;
+    }
+
+    .contact-section .container .info ul {
+        margin-bottom: 30px !important;
+    }
+}
+
+.contact-section .container form {
+    flex-basis: 70%;
+}
+
+
+.contact-section .container form textarea {
+    height: 200px;
+}
+
+.contact-section .container form .main-input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #a2a2a2;
+    margin-bottom: 30px;
+}
+
+.contact-section .container form .main-input:focus {
+    outline: none;
+}
+
+
+.contact-section .container form input[type="submit"] {
+    display: flex;
+    margin-left: auto;
+    padding: 20px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.contact-section .container .info {
+    flex-basis: 25%;
+}
+
+.contact-section .container .info h3 {
+    margin: 5px 0 20px 0;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.contact-section .container .info ul li {
+    padding: 5px 0;
+    color: #777;
+}
+
+.contact-section .container .info ul:first-of-type {
+    margin-bottom: 80px;
+}
+
+/* End concat section*/
+/* Start footer*/
+footer {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: #1f2021;
+    background-image: url("../images/subscribe.jpg");
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+footer .container {
+    text-align: center;
+    position: relative;
+}
+
+footer .container p:first-of-type {
+    width: fit-content;
+    font-size: 22px;
+    border-bottom: 1px solid white;
+    padding: 20px;
+    text-transform: uppercase;
+    margin: 20px auto;
+}
+
+footer .container .icons i {
+    padding: 10px 15px;
+}
+
+footer .container p:last-of-type {
+    margin-top: 60px;
+}
+
+footer .container p:last-of-type span {
+   color: var(--main-color);
+   font-weight: bold;
+}
+/* End footer*/
